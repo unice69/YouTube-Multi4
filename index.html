@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Multi-View</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 横2列 */
+            grid-template-rows: repeat(2, 1fr); /* 縦2列 */
+            width: 100vw;
+            height: 100vh;
+            gap: 1px;
+        }
+        .video-wrapper {
+            position: relative;
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .number-label {
+            position: absolute;
+            bottom: 10px; /* 位置を少し調整 */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            color: white;
+            font-family: Arial, sans-serif;
+            
+            /* --- ここから追加 --- */
+            background-color: rgba(0, 0, 0, 0.7); /* 半透明の黒い背景 */
+            padding: 5px 10px; /* 文字の周りの余白 */
+            border-radius: 5px; /* 角を丸くする */
+            /* --- ここまで追加 --- */
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/h3pbOPE3kLs?autoplay=1" allow="autoplay"></iframe>
+            <div class="number-label">沖縄県 那覇空港</div>
+        </div>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/6HYjCFkmDPA?autoplay=1" allow="autoplay"></iframe>
+            <div class="number-label">沖縄県 那覇市内</div>
+        </div>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/_Upz1dlQgpg?autoplay=1" allow="autoplay"></iframe>
+            <div class="number-label">静岡県 下田白浜</div>
+        </div>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/T3uOuFisD4A?autoplay=1" allow="autoplay"></iframe>
+            <div class="number-label">宮崎県 日南市油津</div>
+        </div>
+    </div>
+</body>
+</html>
